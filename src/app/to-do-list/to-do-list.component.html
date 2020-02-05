@@ -1,0 +1,24 @@
+<div class="todo-list">
+    <h3 class="text-center">To Do List</h3>
+    <form #f="ngForm" (ngSubmit)="addList(f)">
+        <div class="form-group list-input">
+            <input type="text" class="form-control" name="title" ngModel required #title="ngModel">
+            <button type="submit"><i class="fa fa-plus"></i></button>
+            <div class="alert alert-danger" *ngIf="title.invalid && title.touched">
+                Please add to do list.
+            </div>
+        </div>
+    </form>
+    <div class="flex-center" *ngIf="isLoading">
+        <p class="loader"></p>
+    </div>
+    <div *ngIf="!isLoading">
+        <ul class="list-group">
+            <li class="list-group-item" *ngIf="listTitles<1">Add to do list</li>
+            <li class="list-group-item" *ngFor="let list of listTitles; let i = index">{{list.title}} <i style="cursor: pointer" class="fa fa-trash-o" (click)="delList(i)"></i></li>
+        </ul>
+    </div>
+    <div class="alert alert-danger" *ngIf="error">
+        {{error}}
+    </div>
+</div>

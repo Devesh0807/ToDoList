@@ -1,0 +1,57 @@
+.todo-list {
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 15px #999999;
+  margin-top: 70px;
+  background: #fff;
+}
+.todo-list h3.text-center {
+  margin: 5px 0 20px 0;
+}
+.form-group.list-input input.form-control {
+    width: 90%;
+    display: inline-block;
+    border-radius: 0;
+}
+.form-group.list-input button {
+    border: 0;
+    padding: 0;
+    width: 10%;
+    vertical-align: top;
+    text-align: center;
+    background: #ccc;
+}
+.form-group.list-input i.fa.fa-plus {
+    line-height: 38px;
+}
+i.fa.fa-trash-o {
+    float: right;
+    color: #f20000;
+    font-size: 20px;
+    line-height: 24px;
+}
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #7e8b94;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .flex-center {
+    text-align: center!important;
+    display: flex;
+    justify-content: center;
+}
